@@ -1,0 +1,169 @@
+.ncompare
+    &__top
+        padding: 35px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__back
+        background: #EDECEA
+        width: 215px
+        height: 57px
+        display: flex
+        align-items: center
+        justify-content: center
+        grid-gap: 12px
+        font-weight: 300
+        font-size: 18px
+        line-height: 119.19%
+        text-decoration: none
+        color: #333333
+        &:hover
+            background: #E8E8E8
+    &__left
+        display: flex
+        align-items: center
+        grid-gap: 44px
+    &__clear
+        background: #767676
+        font-weight: 300
+        font-size: 18px
+        line-height: 119.19%
+        text-align: center
+        color: #FFFFFF
+        border: 0
+        padding: 18px 35px
+        transition: all 0.3s
+        cursor: pointer
+        &:hover
+            background: #E8E8E8
+            color: #333333
+    &__raz
+        position: relative
+        display: flex
+        align-items: center
+        grid-gap: 14px
+        input
+            position: absolute
+            top: 0
+            left: 0
+            margin: 0
+            padding: 0
+            opacity: 0
+            visibility: hidden
+            height: 0
+            width: 0
+            &+span
+                width: 19px
+                height: 19px
+                background: #EDECEA
+            &:checked
+                &+span
+                    background: #EDECEA url('../img/check.svg') center no-repeat
+    &__cards
+        display: flex
+    &__card
+        width: 25%
+        text-decoration: none
+        color: #333333
+    &__img
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 280px
+        margin: 25px 0
+        img
+            max-width: 100%
+            max-height: 100%
+    &__main
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        padding-top: 15px
+    &__line
+        margin-bottom: 4px
+        background: #EDECEA
+        display: flex
+        padding-top: 57px
+        padding-bottom: 22px
+        span
+            width: 330px
+            text-align: center
+            font-weight: 300
+            font-size: 18px
+            line-height: 119.19%
+            text-align: center
+            text-transform: uppercase
+            color: #333333
+        &-wrap
+            position: relative
+            &:nth-child(2n)
+                .ncompare__line
+                    background: #E8E8E8
+    &__name
+        position: absolute
+        top: 19px
+        left: 0
+        width: 100%
+        font-weight: 700
+        font-size: 18px
+        line-height: 119.19%
+        text-align: center
+        color: #333333
+@media(max-width: 1339px)
+    .ncompare
+        &__line
+            span
+                width: 295px
+@media(max-width: 1199px)
+    .ncompare
+        &__all
+            overflow-x: scroll
+        &__card
+            min-width: 295px
+        &__name
+            max-width: 100%
+            width: 970px
+@media(max-width: 991px)
+    .ncompare
+        &__name
+            width: 740px
+@media(max-width: 767px)
+    .ncompare
+        &__name
+            width: 550px
+        &__top
+            flex-direction: column-reverse
+            grid-gap: 15px 0
+        &__left
+            flex-direction: column-reverse
+@media(max-width: 575px)
+    .ncompare
+        &__line
+            span
+                width: 50vw
+        &__card
+            min-width: 50vw
+            position: relative
+            .ncatalog
+                &__name
+                    font-size: 12px
+                    line-height: 15px
+                &__price
+                    font-size: 9px
+                    line-height: 119.19%
+                &__btn
+                    font-size: 9px
+                    line-height: 119.19%
+                    padding: 7px 12px
+        &__img
+            height: 150px
+        &__all
+            margin-left: -15px
+            margin-right: -15px
+        &__name
+            width: 100vw
+    .ncatalog
+        &__close
+            position: absolute
+            top: 0
+            right: 10px

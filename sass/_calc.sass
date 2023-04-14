@@ -1,0 +1,328 @@
+.ncalc
+    padding-top: 80px
+    padding-bottom: 20px
+    &__top
+        height: 235px
+        background: url('../img/ncalc.jpg') center no-repeat
+        background-size: cover
+        position: relative
+        padding-top: 80px
+        &::after
+            content: ""
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            top: 0
+            left: 0
+            background: #000000
+            opacity: 0.7
+    &__title
+        font-weight: 700
+        font-size: 50px
+        line-height: 119.19%
+        color: #FFFFFF
+        text-align: center
+        position: relative
+        z-index: 2
+        margin: 0
+    &__subtitle
+        font-weight: 700
+        font-size: 20px
+        line-height: 119.19%
+        color: #333333
+        margin-bottom: 23px
+    &__block
+        background: #EDECEA
+        height: 80px
+        width: 640px
+        max-width: 48%
+        padding: 17px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        input
+            border: 0
+            padding: 14px 23px
+            width: 140px
+            appearance: none
+            &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+                appearance: none
+    &__name
+        font-size: 16px
+        line-height: 119.19%
+        letter-spacing: -0.01em
+        color: #333333
+    &__wrap
+        grid-gap: 22px 0
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__select
+        max-width: 445px
+        position: relative
+        display: flex
+        align-items: center
+        min-width: 300px
+        input[type="number"]
+            display: none
+            font-size: 16px
+            line-height: 119.19%
+            padding-left: 40px
+        &.hidden
+            input[type="number"]
+                display: block
+                width: 415px
+            .ncalc__select-top
+                max-width: 20px
+                height: 40px
+        &-top
+            width: 100%
+            font-weight: 400
+            font-size: 16px
+            line-height: 119.19%
+            text-decoration: none
+            text-align: center
+            cursor: pointer
+            position: relative
+            padding: 5px 0
+            padding-right: 20px
+            &::after
+                content: ""
+                display: block
+                width: 8px
+                height: 8px
+                position: absolute
+                top: 50%
+                margin-top: -4px
+                right: 0
+                background: url('../img/calc-drop.svg') center no-repeat
+                transition: all 0.3s
+                pointer-events: none
+        &-drop
+            position: absolute
+            width: 100%
+            top: 100%
+            left: 0
+            z-index: 2
+            padding: 15px
+            background: #767674
+            display: none
+            a
+                display: block
+                padding: 5px 0
+                font-weight: 400
+                font-size: 16px
+                line-height: 119.19%
+                text-decoration: none
+                color: #fff
+                &:hover
+                    opacity: 0.8
+        &.active
+            .ncalc__select
+                &-top
+                    &::after
+                        transform: rotate(180deg)
+                &-drop
+                    display: block
+    &__submit
+        font-weight: 300
+        font-size: 18px
+        line-height: 119.19%
+        color: #FFFFFF
+        padding: 18px 28px
+        background-color: #008800
+        display: inline-block
+        margin-top: 42px
+        margin-bottom: 25px
+        text-decoration: none
+        border: 1px solid #008800
+        &:hover
+            color: #008800
+            background-color: transparent
+    &__bot
+        font-style: italic
+        font-weight: 400
+        font-size: 16px
+        line-height: 119.19%
+        letter-spacing: -0.01em
+        color: #333333
+.nres
+    padding-top: 70px
+    display: none
+    &__top
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-bottom: 30px
+        border-bottom: 1px solid#CBCBCB
+    &__title
+        font-weight: 700
+        font-size: 20px
+        line-height: 119.19%
+        color: #333333
+    &__right
+        display: flex
+        align-items: center
+        grid-gap: 20px
+    &__back
+        background: #EDECEA
+        width: 400px
+        height: 57px
+        display: flex
+        align-items: center
+        justify-content: center
+        grid-gap: 12px
+        font-weight: 300
+        font-size: 18px
+        line-height: 119.19%
+        text-decoration: none
+        color: #333333
+        &:hover
+            background: darken(#EDECEA, 5)
+    &__pech
+        height: 57px
+        width: 220px
+        background-color: #008800
+        border: 1px solid #008800
+        font-weight: 300
+        font-size: 18px
+        line-height: 119.19%
+        color: #FFFFFF
+        cursor: pointer
+        transition: all 0.3s
+        &:hover
+            color: #008800
+            background-color: transparent
+    &-first
+        padding-top: 28px
+        border-bottom: 1px solid#CBCBCB
+        padding-bottom: 17px
+        &__line
+            display: flex
+            font-weight: 400
+            font-size: 16px
+            line-height: 119.19%
+            letter-spacing: -0.01em
+            color: #333333
+            margin-bottom: 14px
+            span
+                &:nth-child(1)
+                    width: 430px
+                    padding-right: 15px
+                &:nth-child(2)
+                    width: calc(100% - 430px)
+    &-teor
+        padding-top: 53px
+        border-bottom: 1px solid#CBCBCB
+        padding-bottom: 40px
+        &2
+            border-bottom: 0
+        &__end
+            font-weight: 700
+            font-size: 16px
+            line-height: 119.19%
+            text-transform: uppercase
+            color: #333333
+            padding-top: 40px
+        &__title
+            font-weight: 700
+            font-size: 20px
+            line-height: 119.19%
+            color: #333333
+            margin-bottom: 28px
+        p
+            font-weight: 300
+            font-size: 16px
+            line-height: 119.19%
+            margin-bottom: 10px
+            color: #333333
+        &__line
+            margin-bottom: 5px
+            img
+                vertical-align: middle
+            span
+                color: #EB2629
+        &__opr
+            display: flex
+            align-items: center
+            &-img
+                width: 137px
+            &-text
+                width: calc(100% - 137px)
+                span
+                    color: #EB2629
+@media(max-width: 991px)
+    .ncalc
+        &__block
+            width: 100%
+            max-width: 100%
+            flex-wrap: wrap
+            height: auto
+            grid-gap: 5px
+        &__title
+            font-size: 35px
+            line-height: 99.19%
+        &__name
+            max-width: 50%
+        &__select
+            padding-top: 10px
+            &-top
+                text-align: left
+                &::after
+                    top: 15px
+    .nres
+        &__top
+            flex-wrap: wrap
+            grid-gap: 25px 0
+        &__right
+            flex-wrap: wrap
+        &-first__line
+            span
+                &:nth-child(1), &:nth-child(2)
+                    width: 50%
+@media(max-width: 575px)
+    .nres
+        padding-top: 40px
+        &-first__line
+            justify-content: space-between
+            span
+                &:nth-child(1)
+                    width: auto
+                &:nth-child(2)
+                    width: auto
+                    min-width: 20%
+                    text-align: right
+        &__right
+            width: 100%
+            justify-content: center
+        &__back
+            font-weight: 300
+            font-size: 16px
+            line-height: 119.19%
+            max-width: 100%
+        &-teor
+            &__opr
+                margin-bottom: 20px
+            &__line
+                img
+                    max-width: 100%
+    .ncalc
+        padding-top: 40px
+        &__top
+            padding-top: 30px
+            padding-bottom: 30px
+            height: auto
+        &__submit
+            margin: 0 auto
+            display: block
+            width: 220px
+            padding-left: 0
+            padding-right: 0
+            text-align: center
+            margin-top: 34px
+            margin-bottom: 27px
+        &__bot
+            text-align: center
+        &__select
+            min-width: 250px

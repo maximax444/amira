@@ -1,0 +1,217 @@
+.ncatalog
+    padding-top: 50px
+    &__wrap
+        display: flex
+        justify-content: space-between
+    &__aside
+        width: 295px
+    &__main
+        width: calc(100% - 330px)
+    &__fil
+        height: 57px
+        background: #003883
+        display: flex
+        align-items: center
+        padding-left: 12px
+        grid-gap: 12px
+        font-weight: 300
+        font-size: 20px
+        line-height: 119.19%
+        text-decoration: none
+        color: #FFFFFF
+    &__filters
+        display: none
+        &.active
+            display: block
+        &-wrap
+            margin-bottom: 20px
+        .ncalc__block
+            max-width: 100%
+            height: auto
+            padding: 22px 15px
+            position: relative
+            &::after
+                position: absolute
+                content: ""
+                display: block
+                height: 1px
+                width: calc(100% - 30px)
+                left: 15px
+                bottom: 0
+                background-color: #CBCBCB
+            &:last-child::after
+                display: none
+            .ncatalog__filters
+                &-inputs
+                    width: 140px
+                    display: flex
+                    align-items: center
+                &-input
+                    width: 70px
+                    position: relative
+                    span
+                        position: absolute
+                        top: 0
+                        left: 0
+                        pointer-events: none
+                        font-weight: 300
+                        font-size: 16px
+                        line-height: 119.19%
+                        left: 12px
+                        top: 12px
+                        color: #525252
+                    input
+                        width: 100%
+                        padding-left: 35px
+                        text-align: left
+                        padding-right: 5px
+        .ncalc__select
+            min-width: 140px
+            &-top
+                text-align: right
+    &__cats
+        &>a
+            background: #767676
+            padding: 11px 19px
+            display: block
+            font-weight: 300
+            font-size: 18px
+            line-height: 119.19%
+            color: #FFFFFF
+            text-decoration: none
+            position: relative
+            &::after
+                content: ""
+                display: block
+                width: 8px
+                height: 8px
+                background: url('../img/drop.svg') center no-repeat
+                position: absolute
+                top: 17px
+                transition: all 0.3s
+                right: 18px
+            &.active
+                &::after
+                    transform: rotate(-180deg)
+            &:hover
+                background: #525252
+        &-drop
+            display: none
+            &.active
+                display: block
+            a
+                background: #EDECEA
+                padding: 11px 19px
+                padding-right: 30px
+                display: block
+                font-weight: 300
+                font-size: 18px
+                line-height: 119.19%
+                color: #525252
+                text-decoration: none
+                position: relative
+                &::after
+                    content: ""
+                    display: block
+                    width: 8px
+                    height: 8px
+                    background: url('../img/drop.svg') center no-repeat
+                    position: absolute
+                    top: 17px
+                    right: 18px
+                    transform: rotate(-90deg)
+                &:hover
+                    background: #6EBED9
+                    color: #fff
+    &__products
+        grid-gap: 30px 39px
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        padding-top: 30px
+    &__block
+        border: 1px solid transparent
+        text-decoration: none
+        color: #333333
+        &:hover
+            border: 1px solid #E8E8E8
+    &__img
+        border: 1px solid #E8E8E8
+        margin: -1px
+        height: 295px
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 25px
+        transition: all 0.3s
+        img
+            max-width: 95%
+            max-height: 95%
+    &__name
+        font-weight: 700
+        font-size: 20px
+        line-height: 119.19%
+        text-align: center
+        color: #333333
+        padding: 25px 15px
+        padding-top: 0
+    &__line
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        padding: 0 20px
+        margin-bottom: 5px
+        b
+            width: 70px
+            text-align: right
+        span
+            width: calc(100% - 75px)
+    &__bot
+        padding: 25px 20px
+        padding-top: 15px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__price
+        font-weight: 300
+        font-size: 16px
+        line-height: 119.19%
+        text-transform: uppercase
+    &__btn
+        padding: 10px 20px
+        font-weight: 300
+        font-size: 16px
+        line-height: 119.19%
+        color: #FFFFFF
+        background: #008800
+        transition: all 0.3s
+        border: 1px solid #008800
+        &:hover
+            background: transparent
+            color: #008800
+    &__block:hover
+        .ncatalog__img
+            border: 1px solid transparent
+@media (max-width: 1339px)
+    .ncatalog
+        &__products
+            grid-gap: 25px 10px
+        &__price
+            font-size: 14px
+@media (max-width: 1199px)
+    .ncatalog
+        &__products
+            grid-template-columns: repeat(2, 1fr)
+@media (max-width: 991px)
+    .ncatalog
+        &__wrap
+            display: block
+        &__aside
+            margin-bottom: 40px
+        &__main
+            width: 100%
+@media (max-width: 575px)
+    .ncatalog
+        &__aside
+            width: 100%
+        &__products
+            grid-template-columns: repeat(1, 1fr)
